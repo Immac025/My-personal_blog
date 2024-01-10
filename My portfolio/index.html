@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Personal Blog</title>
+</head>
+<body>
+  <div class="container">
+    <h1>My Personal Blog</h1>
+    <p>  README:</p>
+     <p>-My name is Immaculate Atieno Ouko a Website Developer</p>
+     <p>My professions are:</p>
+     <p> 
+      -Javascript,html and css
+      - Good at Java(Springboot), C & - REST API
+      
+      - Experience with Github & Learning CI/CD, 
+	  
+	    -MYSQL,Postgres and MariaDB,
+
+      - React and Angular
+      
+      -Currently learning Python & Django</p>
+      <p> Hobbies and Religion:</p>
+      <p> I love swimming and also am a football fun</p>
+      <p>Religion; I am a Christian believer</p>
+      <p>    </p>
+      <p>For work or any question/inquirry</p> 
+
+     <p>Contact me via:</p>
+    
+    <div class="social-icons">
+      <a href="mailto:immaculateatieno@gmail.com">Email</a>
+      <a href="https://wa.me/+254793290909" >WhatsApp</a>
+    </div>
+    
+    <div class="slider-container">
+      <div class="slider">
+        <img src="B1.jpg" alt="Image 1">
+        <img src="B2.jpg" alt="Image 2">
+        <img src="B3.jpg" alt="Image 3">
+        <img src="B4.jpg" alt="Image 4">
+        <img src="IM.jpg" alt="Image IM">
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    // Code for sliding images
+    const slider = document.querySelector('.slider');
+    const images = document.querySelectorAll('.slider img');
+    let currentIndex = 0;
+    let interval;
+    
+    function slideToNext() {
+      currentIndex++;
+      if (currentIndex >= images.length) {
+        currentIndex = 0;
+      }
+      slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+    
+    function startSliding() {
+      interval = setInterval(slideToNext, 3000); // Adjust the interval (in milliseconds) as per your preference
+    }
+    
+    function stopSliding() {
+      clearInterval(interval);
+    }
+    
+    slider.addEventListener('mouseenter', stopSliding);
+    slider.addEventListener('mouseleave', startSliding);
+    
+    startSliding();
+  </script>
+   <link rel="stylesheet" href="body.css">
+</body>
+</html
